@@ -10,7 +10,7 @@ export const SITE = {
   founded: 2005,
   youtube: 'https://www.youtube.com/channel/UCsUF7dngvt-la4hiPG_glcQ',
   instagram: 'https://www.instagram.com/hem.automation',
-  logoUrl: 'http://hemautomation.co.in/img/logos/logo.png',
+  logoUrl: '/hem-logo.png',
   address1: {
     label: 'Bhandup Plant',
     full: 'Plot 1044, Opp. Bhaktani Industrial Estate, Bhandup Sonapur Lane, Off LBS Marg, Bhandup West, Mumbai 400078',
