@@ -1337,10 +1337,8 @@ footer{
 }
 @media(max-width:900px){
   .hero-split{grid-template-columns:1fr;padding:clamp(36px,5vh,56px) 0}
-  /* Show video below text on mobile — use static thumbnail, not heavy iframe */
+  /* Stack: text top, video below — iframe plays inline (mute+playsinline set) */
   .hero-right{display:block;width:100%;padding:0 0 clamp(24px,4vw,40px)}
-  .hero-video-wrap iframe{display:none}
-  .hero-video-thumb{display:block}
   .hvp-stat{display:none}
 }
 
