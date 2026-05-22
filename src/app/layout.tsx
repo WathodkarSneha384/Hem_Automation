@@ -28,6 +28,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'HEM Automation', url: SITE.url }],
   creator: 'HEM Automation',
+  icons: {
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: '/icon.png',
+    shortcut: '/icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
