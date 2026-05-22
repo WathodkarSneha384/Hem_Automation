@@ -95,7 +95,7 @@ export default function CaseStudiesPage() {
                   <span className="case-badge" style={{ marginTop: 4 }}>{cs.badge}</span>
                 </div>
 
-                <div style={{ padding: 'clamp(24px,3vw,36px)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(20px,3vw,40px)' }}>
+                <div className="cs-inner-grid" style={{ padding: 'clamp(24px,3vw,36px)' }}>
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#999', marginBottom: 8 }}>The Challenge</div>
                     <p style={{ fontSize: 13, color: '#444', lineHeight: 1.75, marginBottom: 16 }}>{cs.context}</p>

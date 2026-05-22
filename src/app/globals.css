@@ -280,6 +280,9 @@ button{font-family:inherit}
 .hero-video-wrap iframe{
   width:100%;height:100%;border:0;display:block;pointer-events:none
 }
+.hero-video-thumb{
+  display:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0
+}
 /* Red top-left corner accent */
 .hero-video-wrap::after{
   content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
@@ -481,6 +484,17 @@ button{font-family:inherit}
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:clamp(10px,2vw,18px);margin-top:clamp(24px,3vw,36px)
 }
+/* Responsive 2-column grid: side-by-side desktop → stacked mobile */
+.two-col-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(32px,5vw,72px);align-items:start
+}
+/* Case-study inner grid: challenge left / results right */
+.cs-inner-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(20px,3vw,40px)
+}
+
 /* 4-item grid: 4-col desktop → 2×2 tablet → 1-col mobile */
 .quad-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -1323,7 +1337,11 @@ footer{
 }
 @media(max-width:900px){
   .hero-split{grid-template-columns:1fr;padding:clamp(36px,5vh,56px) 0}
-  .hero-right{display:none}
+  /* Show video below text on mobile — use static thumbnail, not heavy iframe */
+  .hero-right{display:block;width:100%;padding:0 0 clamp(24px,4vw,40px)}
+  .hero-video-wrap iframe{display:none}
+  .hero-video-thumb{display:block}
+  .hvp-stat{display:none}
 }
 
 @media(max-width:1024px){
@@ -1335,6 +1353,8 @@ footer{
   .contact-grid{grid-template-columns:1fr}
   .products-full-grid{grid-template-columns:1fr 1fr}
   .industries-detail-grid{grid-template-columns:1fr !important}
+  .two-col-grid{grid-template-columns:1fr}
+  .cs-inner-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:768px){

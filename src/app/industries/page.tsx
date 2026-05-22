@@ -92,7 +92,7 @@ export default function IndustriesPage() {
           style={{ background: i % 2 === 1 ? '#F2F2F2' : '#fff' }}
         >
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,72px)', alignItems: 'start' }}>
+            <div className="two-col-grid">
               <div>
                 <div
                   style={{

@@ -56,7 +56,7 @@ export default function AboutPage() {
       {/* Story */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,72px)', alignItems: 'start' }}>
+          <div className="two-col-grid">
             <div>
               <span className="label">Our Story</span>
               <h2 className="h2">Born from a Passion<br />for <span className="red">Engineering</span></h2>

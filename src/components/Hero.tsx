@@ -79,6 +79,14 @@ export default function Hero() {
                     allowFullScreen={false}
                     aria-hidden="true"
                   />
+                  {/* Mobile fallback — static thumbnail replaces iframe on small screens */}
+                  <img
+                    className="hero-video-thumb"
+                    src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+                    alt="HEM Automation – Cap &amp; Closure Machinery"
+                    aria-hidden="true"
+                    onError={(e) => { e.currentTarget.src = `https://img.youtube.com/vi/${VIDEO_ID}/sddefault.jpg` }}
+                  />
                 </div>
 
                 {/* Floating stat badges */}
